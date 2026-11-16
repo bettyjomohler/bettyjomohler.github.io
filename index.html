@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Betty Jo Mohler · Human-Centered Machine Learning, Extended Reality & Wearables</title>
+<meta name="description" content="Dr. Betty Jo Mohler: research on extended reality, wearable technologies, human perception and human-centered machine learning, with applications in clinics and classrooms.">
+<!--
+  HOW TO EDIT THIS PAGE
+  - Profile photo: embedded directly in this file (PROFILE_PHOTO below). To change it, set PROFILE_PHOTO to a path such as "images/profile.jpg".
+  - Publication thumbnails: in the PUBS list near the bottom, set "img" to a path such as "images/pubs/bodymetric.jpg".
+    Until then, each publication shows a small placeholder.
+  - Links: set "pdf" and/or "doi" for each publication. Empty links are hidden.
+  - Topics are defined in TOPICS; a publication can belong to several.
+  To publish on GitHub Pages: create a repository named <your-username>.github.io, add this file as index.html,
+  commit, and enable Pages in the repository settings.
+-->
+<style>
+  :root{
+    --bg:#faf7f2; --paper:#ffffff; --ink:#1f1b1a; --muted:#6b625e; --line:#e7dfd6;
+    --accent:#7a1f3d; --accent-soft:#f3e7eb;
+    --A:#2f5d8a; --B:#7a1f3d; --C:#2e7d6b; --D:#b4632b; --E:#6a4c93;
+    --serif: "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans)}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:10;background:rgba(250,247,242,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+  nav .brand{font-family:var(--serif);font-weight:700;color:var(--ink);margin-right:auto}
+  nav a{color:var(--muted);font-size:14px} nav a:hover{color:var(--accent);text-decoration:none}
+  header.hero{padding:64px 0 40px}
+  .hero .grid{display:grid;grid-template-columns:160px 1fr;gap:36px;align-items:center}
+  .photo{width:160px;height:160px;border-radius:50%;background:var(--accent-soft);border:3px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:44px;color:var(--accent);overflow:hidden}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  h1{font-family:var(--serif);font-size:44px;line-height:1.1;margin:0 0 8px}
+  .tagline{font-size:19px;color:var(--accent);margin:0 0 14px;font-weight:600}
+  .lede{font-size:17px;color:var(--muted);margin:0 0 18px;max-width:640px}
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);font-size:14px}
+  .btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  h2{font-family:var(--serif);font-size:28px;margin:0 0 20px}
+  h3{font-size:17px;margin:0 0 6px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  .card .kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+  .timeline{list-style:none;margin:0;padding:0}
+  .timeline li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .timeline li:last-child{border-bottom:0}
+  .when{color:var(--muted);font-variant-numeric:tabular-nums;font-size:14px;padding-top:2px}
+  .what b{display:block} .what span{color:var(--muted);font-size:15px}
+  ul.plain{margin:0;padding-left:18px} ul.plain li{margin:4px 0}
+  /* publications */
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+  .chip{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 12px;font-size:14px;cursor:pointer;color:var(--ink);display:inline-flex;gap:7px;align-items:center}
+  .chip .dot{width:9px;height:9px;border-radius:50%}
+  .chip .n{color:var(--muted);font-size:12px}
+  .chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
+  .chip[aria-pressed="true"] .n{color:#ddd}
+  .search{margin-left:auto;padding:7px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:14px;min-width:220px;background:var(--paper)}
+  .group{margin:26px 0 8px;display:flex;align-items:center;gap:10px}
+  .group h3{font-family:var(--serif);font-size:21px;margin:0}
+  .group .bar{width:14px;height:14px;border-radius:4px}
+  .group .count{color:var(--muted);font-size:14px}
+  .pub{display:grid;grid-template-columns:72px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .thumb{width:72px;height:72px;border-radius:8px;border:1.5px dashed #cfc5bb;background:#f4efe9;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:10px;color:#9a8f86;text-align:center;line-height:1.2;overflow:hidden}
+  .thumb .ini{font-family:var(--serif);font-size:20px;font-weight:700}
+  .thumb img{width:100%;height:100%;object-fit:cover}
+  .pub .t{font-weight:600;line-height:1.35}
+  .pub .a{font-size:14px;color:var(--muted);margin:3px 0}
+  .pub .a b{color:var(--ink)}
+  .pub .v{font-size:14px;font-style:italic;color:var(--muted)}
+  .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center}
+  .tag{font-size:11.5px;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
+  .tag.type{background:#ece7e1}
+  .tag.star{background:#fff3cf}
+  .plink{font-size:13px;font-weight:600}
+  .empty{color:var(--muted);padding:20px 0}
+  footer{padding:30px 0 50px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+  @media (max-width:760px){
+    .hero .grid{grid-template-columns:1fr;gap:20px}
+    h1{font-size:34px}
+    .cards{grid-template-columns:1fr}
+    .timeline li{grid-template-columns:1fr;gap:2px}
+    .search{margin-left:0;width:100%}
+  }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <span class="brand">Betty Jo Mohler</span>
+  <a href="#about">About</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a>
+</div></nav>
+
+<header class="hero"><div class="wrap grid">
+  <div class="photo" id="photo" aria-label="Profile photo placeholder">BJM</div>
+  <div>
+    <h1>Dr. Betty Jo Mohler</h1>
+    <p class="tagline">Human-centered machine learning, extended reality &amp; wearables</p>
+    <p class="lede">I bring AI to people: building and evaluating extended-reality and wearable systems that turn machine learning into tools for clinics, classrooms and everyday life.</p>
+    <div class="links">
+      <a class="btn" href="https://scholar.google.com/citations?user=fjAWIaAAAAAJ&amp;hl=en">Google Scholar</a>
+      <a class="btn" href="mailto:betty.jo.mohler@gmail.com">Email</a>
+      <a class="btn" href="#publications">Publications</a>
+      <!-- <a class="btn" href="cv.pdf">CV (PDF)</a> -->
+    </div>
+  </div>
+</div></header>
+
+<main>
+<section id="about"><div class="wrap">
+  <h2>About</h2>
+  <p>I am a scientist working at the intersection of extended reality (XR), human perception and machine learning. For more than two decades I have studied how people perceive space, motion and their own bodies in virtual and augmented reality, and how self-avatars change what we see and feel. I led an independent Max Planck research group in Tübingen, held a tenured W2 professorship at TU Darmstadt, and spent eight years as a Principal Applied Scientist at Amazon, building multimodal datasets, generative models, benchmarks and AR virtual try-on.</p>
+  <p>My work today focuses on bringing AI safely and measurably to people: in clinical assessment and therapy with partners at the University Hospital Tübingen, and in schools, where young people are the first generation to grow up learning with AI helpers. Every week I teach robotics and coding to children and teenagers in Tübingen.</p>
+</div></section>
+
+<section id="research"><div class="wrap">
+  <h2>Research</h2>
+  <div class="cards">
+    <div class="card"><div class="kicker">Medium</div><h3>Extended reality &amp; wearables</h3><p>VR, AR, smart glasses and body-worn sensors as the way people meet AI, and as precise instruments for measuring perception, movement and behavior.</p></div>
+    <div class="card"><div class="kicker">Method</div><h3>Human-centered machine learning</h3><p>Multimodal behavioral data and human-in-the-loop benchmarks that show whether generative and multimodal models actually work for people.</p></div>
+    <div class="card"><div class="kicker">Impact</div><h3>Clinics &amp; classrooms</h3><p>3D body and motion models for stroke and eating-disorder assessment, and research on how AI and wearables shape students’ learning, fitness and sense of self.</p></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <ul class="timeline">
+    <li><div class="when">2018 – 2026</div><div class="what"><b>Principal Applied Scientist, Amazon, Tübingen</b><span>Multimodal training datasets for vision-language models, image and video generation, generative-AI benchmarks, AR virtual try-on and personalized ML. Co-architect of the Amazon–Max Planck Science Hub.</span></div></li>
+    <li><div class="when">2017 – 2018</div><div class="what"><b>W2 Professor (tenured), TU Darmstadt</b><span>Centre for Cognitive Science.</span></div></li>
+    <li><div class="when">2011 – 2017</div><div class="what"><b>Minerva Independent Research Group Leader, Max Planck Institute for Biological Cybernetics</b><span>Space &amp; Body Perception: self-avatars, embodiment and clinical VR.</span></div></li>
+    <li><div class="when">2007 – 2010</div><div class="what"><b>Project Leader, Max Planck Institute for Biological Cybernetics</b><span>Perception and Action in Virtual Environments.</span></div></li>
+    <li><div class="when">2007</div><div class="what"><b>Ph.D. in Computer Science, University of Utah</b><span>The effect of feedback within a virtual environment on human distance judgments.</span></div></li>
+    <li><div class="when">2025 – present</div><div class="what"><b>STEM educator (volunteer), Tübingen</b><span>Weekly robotics, Scratch and Python teaching from kindergarten to grade 11, including TecLab and the Wildermuth-Gymnasium robotics club.</span></div></li>
+  </ul>
+  <h3 style="margin-top:26px">Selected honors</h3>
+  <ul class="plain">
+    <li>IEEE VGTC Virtual Reality Academy, inaugural class (2022)</li>
+    <li>Minerva Independent Research Group Leader Award, Max Planck Society (2014)</li>
+    <li>W3 professorship offer in Media Informatics, University of Ulm (2018)</li>
+  </ul>
+</div></section>
+
+<section id="publications"><div class="wrap">
+  <h2>Publications</h2>
+  <div class="toolbar" id="toolbar" role="group" aria-label="Filter publications by topic"></div>
+  <div id="publist"></div>
+</div></section>
+
+<section id="teaching"><div class="wrap">
+  <h2>Teaching &amp; mentoring</h2>
+  <ul class="plain">
+    <li>University teaching at TU Darmstadt, the University of Tübingen (Graduate Training Centre of Neuroscience), Seoul National University and the University of Utah: experimental research methods, spatial cognition, computer graphics, scientific visualization and introductory computer science.</li>
+    <li>Supervised 8 doctoral researchers, 7 postdoctoral scientists and 28 Bachelor’s and Master’s theses.</li>
+    <li>Mentored applied scientists and research interns at Amazon in machine learning and computer vision.</li>
+  </ul>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Betty Jo Mohler · Tübingen, Germany · Last updated November 2026</div></footer>
+
+<script>
+const PROFILE_PHOTO = "data:image/jpeg;base64,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";   // embedded photo; or use a path such as "images/profile.jpg"
+const ME = /Mohler BJ|Tesch BM/;
+const TOPICS = {
+  A: {name: "Machine Learning & Generative AI", color: "var(--A)", ini: "ML"},
+  B: {name: "Virtual Reality & Avatars",        color: "var(--B)", ini: "VR"},
+  C: {name: "Space & Motion Perception",        color: "var(--C)", ini: "SP"},
+  D: {name: "Body Perception & Body Image",     color: "var(--D)", ini: "BP"},
+  E: {name: "Clinical Applications",            color: "var(--E)", ini: "CL"}
+};
+const PUBS = [
+ {
+  "authors": "Andreou N, Vivek V, Wang Y, Vorobiov A, Deng T, Bala R, Davis L, Mohler BJ",
+  "year": 2024,
+  "title": "BodyMetric: Evaluating the Realism of Human Bodies in Text-to-Image Generation",
+  "venue": "arXiv / Computer Vision Workshop Proceedings",
+  "type": "Conference paper",
+  "topics": [
+   "A"
+  ],
+  "featured": true,
+  "id": "bodymetric-evaluating-the-realism-of-hum-2024",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mokhtari M, Dezaki FT, Bolkart T, Tesch BM, Suresh R, Mohler BJ",
+  "year": 2024,
+  "title": "Skin Tone Disentanglement in 2D Makeup Transfer with Graph Neural Networks",
+  "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2024)",
+  "type": "Conference paper",
+  "topics": [
+   "A"
+  ],
+  "featured": true,
+  "id": "skin-tone-disentanglement-in-2d-makeup-t-2024",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Meneguzzo P, Behrens SC, Favaro A, Tenconi E, Vindigni V, Teufel M, Skoda EM, Lindner M, Walder L, Quiros-Ramirez MA, Mohler BJ, Black MJ, Zipfel S, Giel KE",
+  "year": 2021,
+  "title": "Body image disturbances and weight bias after obesity surgery: Semantic visual evaluation in a controlled study, findings from the BodyTalk project",
+  "venue": "Obesity Surgery, 31(4), 1625–1634",
+  "type": "Journal article",
+  "topics": [
+   "D",
+   "E"
+  ],
+  "featured": false,
+  "id": "body-image-disturbances-and-weight-bias-2021",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Shahvaroughi-Farahani A, Linkenauger SA, Mohler BJ, Behrens SC, Karnath H-O",
+  "year": 2021,
+  "title": "Body size perception in stroke patients with hemiparesis",
+  "venue": "PLoS One, 16(6), e0252596",
+  "type": "Journal article",
+  "topics": [
+   "D",
+   "E"
+  ],
+  "featured": false,
+  "id": "body-size-perception-in-stroke-patients-2021",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Sanyal S, Vorobiov A, Bolkart T, Loper M, Mohler BJ, Davis LS, Romero J, Black MJ",
+  "year": 2021,
+  "title": "Learning realistic human reposing using cyclic self-supervision with 3D shape, pose, and appearance consistency",
+  "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV 2021)",
+  "type": "Journal article",
+  "topics": [
+   "A"
+  ],
+  "featured": true,
+  "id": "learning-realistic-human-reposing-using-2021",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Behrens SC, Meneguzzo P, Favaro A, Teufel M, Skoda EM, Lindner M, Walder L, Quiros-Ramirez MA, Mohler BJ, Black MJ, Zipfel S, Giel KE",
+  "year": 2021,
+  "title": "Weight bias and linguistic body representation in anorexia nervosa: Findings from the BodyTalk project",
+  "venue": "European Eating Disorders Review, 29(2), 204–215",
+  "type": "Journal article",
+  "topics": [
+   "D",
+   "E"
+  ],
+  "featured": false,
+  "id": "weight-bias-and-linguistic-body-represen-2021",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Thaler A, Bieg HJ, Mahmood N, Black MJ, Mohler BJ, Troje NF",
+  "year": 2020,
+  "title": "The role of sexual dimorphism in judgments of attractiveness and confidence in human gait",
+  "venue": "Journal of Vision, 20(11), 878",
+  "type": "Journal article",
+  "topics": [
+   "D"
+  ],
+  "featured": false,
+  "id": "the-role-of-sexual-dimorphism-in-judgmen-2020",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "van der Veer AH, Alsmith AJT, Longo MR, Wong HY, Diers D, Bues M, Giesel M, Mohler BJ",
+  "year": 2019,
+  "title": "Caloric vestibular stimulation has no effect on perceived body size",
+  "venue": "Scientific Reports, 9(1), 11411",
+  "type": "Journal article",
+  "topics": [
+   "D"
+  ],
+  "featured": false,
+  "id": "caloric-vestibular-stimulation-has-no-ef-2019",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Foster C, Zhao M, Romero J, Black MJ, Mohler BJ, Bartels A, Bülthoff I",
+  "year": 2019,
+  "title": "Decoding subcategories of human bodies in both body- and face-responsive cortical regions",
+  "venue": "NeuroImage, 202, 116085",
+  "type": "Journal article",
+  "topics": [
+   "D"
+  ],
+  "featured": false,
+  "id": "decoding-subcategories-of-human-bodies-i-2019",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Dixken J, Wingert B, Hatzipanayioti A, Riedel O, Mohler BJ",
+  "year": 2019,
+  "title": "Embodied collaborative virtual environments for simplified product design review",
+  "venue": "Proceedings of EuroVR 2019, 299–300",
+  "type": "Conference paper",
+  "topics": [
+   "B"
+  ],
+  "featured": false,
+  "id": "embodied-collaborative-virtual-environme-2019",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "van der Veer AH, Longo MR, Alsmith AJT, Wong HY, Mohler BJ",
+  "year": 2019,
+  "title": "Self and body part localization in virtual reality: Comparing a headset and a large-screen immersive display",
+  "venue": "Frontiers in Robotics and AI, 6, 33",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "D"
+  ],
+  "featured": false,
+  "id": "self-and-body-part-localization-in-virtu-2019",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Pujades S, Mohler BJ, Thaler A, Tesch J, Mahmood N, Hesse N, Bülthoff HH, Black MJ",
+  "year": 2019,
+  "title": "The Virtual Caliper: Rapid creation of metrically accurate 3D avatars from sparse measurements",
+  "venue": "IEEE Transactions on Visualization and Computer Graphics (TVCG), 25(5), 1887–1897",
+  "type": "Journal article",
+  "topics": [
+   "A",
+   "B"
+  ],
+  "featured": false,
+  "id": "the-virtual-caliper-rapid-creation-of-me-2019",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mölbert SC, Thaler A, Mohler BJ, Streuber S, Romero J, Black MJ, Zipfel S, Karnath H-O, Giel KE",
+  "year": 2018,
+  "title": "Assessing body image in anorexia nervosa using biometric self-avatars in virtual reality: Attitudinal components rather than visual body size estimation are distorted",
+  "venue": "Psychological Medicine, 48(4), 642–653",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "D",
+   "E"
+  ],
+  "featured": true,
+  "id": "assessing-body-image-in-anorexia-nervosa-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Thaler A, Geuss MN, Mölbert SC, Giel KE, Streuber S, Romero J, Black MJ, Mohler BJ",
+  "year": 2018,
+  "title": "Body size estimation of self and others in females varying in BMI",
+  "venue": "PLoS One, 13(2), e0192152",
+  "type": "Journal article",
+  "topics": [
+   "D"
+  ],
+  "featured": false,
+  "id": "body-size-estimation-of-self-and-others-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Hein E, Rieschick A, Bechtold L, Mohler BJ",
+  "year": 2018,
+  "title": "Collective vs. individual spatial reference frames in virtual environments",
+  "venue": "16th Annual Meeting of the Vision Sciences Society",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "collective-vs-individual-spatial-referen-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Thornton IM, Wootton Z, Pedmanson P, Mohler BJ",
+  "year": 2018,
+  "title": "Face recognition from full-body motion by naïve observers in an immersive virtual environment",
+  "venue": "Attention, Perception, & Psychophysics, 80, 242–251",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "D"
+  ],
+  "featured": false,
+  "id": "face-recognition-from-full-body-motion-b-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mohler BJ, et al.",
+  "year": 2018,
+  "title": "In touch with your virtual self: Embodied interaction in VR",
+  "venue": "Australasian Cognitive Neuroscience Society Conference, 75",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "D"
+  ],
+  "featured": false,
+  "id": "in-touch-with-your-virtual-self-embodied-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mölbert SC, Thaler A, Streuber S, Black MJ, Karnath H-O, Zipfel S, Mohler BJ, Giel KE",
+  "year": 2018,
+  "title": "Investigating body image disturbance in anorexia nervosa using novel biometric figure rating scales: A pilot study",
+  "venue": "European Eating Disorders Review, 26(6), 607–612",
+  "type": "Journal article",
+  "topics": [
+   "D",
+   "E"
+  ],
+  "featured": false,
+  "id": "investigating-body-image-disturbance-in-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Thaler A, Mölbert SC, Giel KE, Black MJ, Mohler BJ",
+  "year": 2018,
+  "title": "Metric vs. attitudinal body size estimation in virtual reality",
+  "venue": "41st European Conference on Visual Perception (ECVP), Perception, 47(1_suppl), 7",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "D"
+  ],
+  "featured": false,
+  "id": "metric-vs-attitudinal-body-size-estimati-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Giel KE, Mölbert SC, Thaler A, Black MJ, Karnath H-O, Zipfel S, Mohler BJ",
+  "year": 2018,
+  "title": "Personalized health everywhere: Virtual reality body-image assessment in clinical settings",
+  "venue": "Proceedings of KogWis 2018, 165–166",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "D",
+   "E"
+  ],
+  "featured": false,
+  "id": "personalized-health-everywhere-virtual-r-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Pavlidou A, Mohler BJ, et al.",
+  "year": 2018,
+  "title": "Solving the perspective-taking problem in remote virtual reality collaboration setups",
+  "venue": "Proceedings of IEEE VR 2018, 964–965",
+  "type": "Conference paper",
+  "topics": [
+   "B"
+  ],
+  "featured": false,
+  "id": "solving-the-perspective-taking-problem-i-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "van der Veer AH, Alsmith AJT, Longo MR, Wong HY, Mohler BJ",
+  "year": 2018,
+  "title": "Where am I in virtual reality?",
+  "venue": "PLoS One, 13(10), e0204358",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "where-am-i-in-virtual-reality-2018",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mölbert SC, Klein L, Thaler A, Mohler BJ, Brozzo C, Martus P, Karnath H-O, Zipfel S, Giel KE",
+  "year": 2017,
+  "title": "Depictive and metric body size estimation in anorexia nervosa and bulimia nervosa: A systematic review and meta-analysis",
+  "venue": "Clinical Psychology Review, 57, 21–31",
+  "type": "Journal article",
+  "topics": [
+   "D",
+   "E"
+  ],
+  "featured": false,
+  "id": "depictive-and-metric-body-size-estimatio-2017",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Quiros-Ramirez MA, Streuber S, Black MJ, Mohler BJ",
+  "year": 2017,
+  "title": "Semantic descriptors of 3D human body shape",
+  "venue": "Proceedings of the ACM Symposium on Applied Perception (SAP '17)",
+  "type": "Conference paper",
+  "topics": [
+   "A",
+   "D"
+  ],
+  "featured": false,
+  "id": "semantic-descriptors-of-3d-human-body-sh-2017",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Wu H, Ashmead DH, Adams H, Bodenheimer B, Mohler BJ",
+  "year": 2016,
+  "title": "Arm's reach influences near-space perception, but only after visual-motor experience",
+  "venue": "Attention, Perception, & Psychophysics, 78, 393–401",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "arm-s-reach-influences-near-space-percep-2016",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Bues M, Strauss S, Fleig M, Blankenbach K, Mohler BJ",
+  "year": 2016,
+  "title": "Egocentric perspective volume rendering for immersive visualization of rooms",
+  "venue": "Journal of Imaging Science and Technology, 60(6), 60405-1–60405-16",
+  "type": "Journal article",
+  "topics": [
+   "B"
+  ],
+  "featured": false,
+  "id": "egocentric-perspective-volume-rendering-2016",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Kuhlen TW, Rosenblum L, Mohler BJ, et al.",
+  "year": 2016,
+  "title": "Global virtual reality research perspectives: From perceptual foundations to clinical applications",
+  "venue": "IEEE VR Panel Proceedings",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "E"
+  ],
+  "featured": false,
+  "id": "global-virtual-reality-research-perspect-2016",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Fleming RW, Mohler BJ, Breidt M, Bülthoff HH",
+  "year": 2016,
+  "title": "Perception and computer graphics: Bridging human vision and rendering",
+  "venue": "In: VISIGRAPP 2016 Selected Papers (Communications in Computer and Information Science, Vol. 693, pp. 175–196). Springer, Cham",
+  "type": "Book chapter",
+  "topics": [
+   "B"
+  ],
+  "featured": false,
+  "id": "perception-and-computer-graphics-bridgin-2016",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Geuss MN, Stefanucci JK, de La Rosa S, Bülthoff HH, Mohler BJ",
+  "year": 2015,
+  "title": "Effect of viewing plane on perceived distances in real and virtual environments",
+  "venue": "Journal of Experimental Psychology: Human Perception and Performance, 41(4), 1066–1077",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "effect-of-viewing-plane-on-perceived-dis-2015",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Dobricki M, Mohler BJ",
+  "year": 2015,
+  "title": "Embodied simulation-based motor imagery: Motor execution modulates spatial perception",
+  "venue": "Experimental Brain Research, 233(4), 1117–1124",
+  "type": "Journal article",
+  "topics": [
+   "C",
+   "D"
+  ],
+  "featured": false,
+  "id": "embodied-simulation-based-motor-imagery-2015",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Soyka F, Smallwood R, Ferguson M, Bülthoff HH, Mohler BJ",
+  "year": 2015,
+  "title": "Enhancing spatial orientation in virtual environments using dynamic visual cues",
+  "venue": "ACM Symposium on Applied Perception (SAP '15), 85–88",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "enhancing-spatial-orientation-in-virtual-2015",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Leyrer M, Linkenauger SA, Bülthoff HH, Mohler BJ",
+  "year": 2015,
+  "title": "Eye height manipulations: A possible solution to reduce underestimation of egocentric distances in head-mounted displays",
+  "venue": "ACM Transactions on Applied Perception (TAP), 12(1), 1:1–1:23",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "eye-height-manipulations-a-possible-solu-2015",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Linkenauger SA, Wong HY, Geuss M, Stefanucci JK, McCulloch KC, Bülthoff HH, Mohler BJ, Proffitt DR",
+  "year": 2015,
+  "title": "The perceptual homunculus: The perception of the relative proportions of the human body",
+  "venue": "Journal of Experimental Psychology: General, 144(1), 103–113",
+  "type": "Journal article",
+  "topics": [
+   "D"
+  ],
+  "featured": false,
+  "id": "the-perceptual-homunculus-the-perception-2015",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Gutekunst S, Bülthoff HH, Mohler BJ",
+  "year": 2014,
+  "title": "A video and audio corpus of natural dyadic interactions in virtual reality",
+  "venue": "Proceedings of LREC 2014",
+  "type": "Conference paper",
+  "topics": [
+   "A",
+   "B"
+  ],
+  "featured": false,
+  "id": "a-video-and-audio-corpus-of-natural-dyad-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mohler BJ, Creem-Regehr SH, Thompson WB, Bülthoff HH",
+  "year": 2014,
+  "title": "Adapting to altered visual feedback in virtual environments",
+  "venue": "In: K. S. Hale & K. M. Stanney (Eds.), Handbook of Virtual Environments: Design, Implementation, and Applications (2nd ed., pp. 81–97). CRC Press",
+  "type": "Book chapter",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "adapting-to-altered-visual-feedback-in-v-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Piryankova IV, Stefanucci JK, Romero J, de La Rosa S, Black MJ, Mohler BJ",
+  "year": 2014,
+  "title": "Can I recognize my body's weight? The influence of shape and texture on the perception of self",
+  "venue": "ACM Transactions on Applied Perception (TAP), 11(3), 13:1–13:18",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "D"
+  ],
+  "featured": false,
+  "id": "can-i-recognize-my-body-s-weight-the-inf-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Volkova E, Mohler BJ, Dodds TJ, Tesch J, Bülthoff HH",
+  "year": 2014,
+  "title": "Emotion categorization of body expressions in narrative scenarios",
+  "venue": "Frontiers in Psychology / CogSci Proceedings, 484–491",
+  "type": "Conference paper",
+  "topics": [
+   "D"
+  ],
+  "featured": false,
+  "id": "emotion-categorization-of-body-expressio-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Richards C, Mohler BJ, et al.",
+  "year": 2014,
+  "title": "Evaluating hand-centered distance perception in virtual environments",
+  "venue": "IEEE Transactions on Visualization and Computer Graphics, 20(12), 2086–2094",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "evaluating-hand-centered-distance-percep-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Ghasemi A, Mahmoodi M, Mohler BJ, et al.",
+  "year": 2014,
+  "title": "Perception of biological motion and table tennis expertise",
+  "venue": "Biological Cybernetics, 108(5), 603–619",
+  "type": "Journal article",
+  "topics": [
+   "C"
+  ],
+  "featured": false,
+  "id": "perception-of-biological-motion-and-tabl-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Rauh R, Kreft G, Bülthoff HH, Mohler BJ",
+  "year": 2014,
+  "title": "Perception of physical strength and power from male 3D body shape",
+  "venue": "Perception, 43, 333–334",
+  "type": "Conference paper",
+  "topics": [
+   "D"
+  ],
+  "featured": false,
+  "id": "perception-of-physical-strength-and-powe-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Volkova E, de La Rosa S, Bülthoff HH, Mohler BJ",
+  "year": 2014,
+  "title": "The MPI Emotional Body Expressions Database for Narrative Scenarios",
+  "venue": "PLoS One, 9(12), e113647",
+  "type": "Journal article",
+  "topics": [
+   "A",
+   "D"
+  ],
+  "featured": false,
+  "id": "the-mpi-emotional-body-expressions-datab-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "D'Cruz M, Lewis L, Cobb S, Helin K, Viitaniemi J, Fröhlich A, Kulik A, Frangakis N, Mohler BJ",
+  "year": 2014,
+  "title": "VR-HYPERSPACE: The innovative use of virtual reality to increase comfort by changing the perception of self and space",
+  "venue": "Proceedings of Transport Research Arena (TRA 2014), 167–168",
+  "type": "Conference paper",
+  "topics": [
+   "B"
+  ],
+  "featured": false,
+  "id": "vr-hyperspace-the-innovative-use-of-virt-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Kokkinara E, Slater M, Mohler BJ",
+  "year": 2014,
+  "title": "Visual turbulence can shake your sense of body ownership",
+  "venue": "Proceedings of IEEE Virtual Reality (IEEE VR 2014)",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "D"
+  ],
+  "featured": false,
+  "id": "visual-turbulence-can-shake-your-sense-o-2014",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Di Luca M, Ernst MO, Mohler BJ",
+  "year": 2013,
+  "title": "Multisensory spatial perception",
+  "venue": "In: D. Reisberg (Ed.), The Oxford Handbook of Cognitive Psychology (pp. 209–225). Oxford University Press",
+  "type": "Book chapter",
+  "topics": [
+   "C"
+  ],
+  "featured": false,
+  "id": "multisensory-spatial-perception-2013",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Steinicke F, Bruder G, Kohli L, Jerald J, Mohler BJ",
+  "year": 2013,
+  "title": "Redirected walking: An overview of perceptual and physical limits in virtual reality",
+  "venue": "Presence: Teleoperators and Virtual Environments, 22(1), 1–20",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "redirected-walking-an-overview-of-percep-2013",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Heydrich L, Dodds TJ, Aspell JE, Herbelin B, Bülthoff HH, Mohler BJ, Blanke O",
+  "year": 2013,
+  "title": "Visual capture and the experience of having two bodies — Evidence from two different virtual reality techniques",
+  "venue": "Frontiers in Psychology, 4, 946",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "D"
+  ],
+  "featured": false,
+  "id": "visual-capture-and-the-experience-of-hav-2013",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Rapp W, Krug J, Mohler BJ, et al.",
+  "year": 2012,
+  "title": "Neuromuscular activation in high-level gymnasts during dynamic leg acceleration and electromyography analysis",
+  "venue": "Journal of Electromyography and Kinesiology, 22(6), 1124–1130",
+  "type": "Journal article",
+  "topics": [
+   "C"
+  ],
+  "featured": false,
+  "id": "neuromuscular-activation-in-high-level-g-2012",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Bruder G, Steinicke F, Wieland P, Lappe M, Mohler BJ",
+  "year": 2012,
+  "title": "Velocity-dependent dynamic curvature gain redirected walking",
+  "venue": "IEEE Transactions on Visualization and Computer Graphics, 18(7), 1041–1050",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "velocity-dependent-dynamic-curvature-gai-2012",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Souman JL, Giordano PR, Frissen I, de Luca A, Mohler BJ, Ernst MO",
+  "year": 2011,
+  "title": "Making virtual walking real: Perceptual evaluation of a new redirection algorithm in an infinite walking setup",
+  "venue": "ACM Transactions on Applied Perception, 8(4), 25:1–25:22",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "making-virtual-walking-real-perceptual-e-2011",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Dodds TJ, Mohler BJ, Bülthoff HH",
+  "year": 2011,
+  "title": "Talk to the virtual hands: Self-animated avatars improve communication in head-mounted display virtual environments",
+  "venue": "PLoS One / ACM CHI Extended Abstracts, 132–135",
+  "type": "Conference paper",
+  "topics": [
+   "B"
+  ],
+  "featured": false,
+  "id": "talk-to-the-virtual-hands-self-animated-2011",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Ruddle RA, Volkova E, Mohler BJ, Bülthoff HH",
+  "year": 2011,
+  "title": "The effect of landmark and body-based sensory information on route knowledge",
+  "venue": "Memory & Cognition, 39(4), 686–699",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "the-effect-of-landmark-and-body-based-se-2011",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "McManus EA, Bodenheimer B, Streuber S, de La Rosa S, Bülthoff HH, Mohler BJ",
+  "year": 2011,
+  "title": "The influence of avatar (self and character) animations on distance estimation, object interaction, and locomotion in immersive virtual environments",
+  "venue": "Proceedings of the ACM SIGGRAPH Symposium on Applied Perception in Graphics and Visualization (APGV '11), 37–44",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "the-influence-of-avatar-self-and-charact-2011",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Alexandrova IV, Teneva PT, de La Rosa S, Kloos U, Bülthoff HH, Mohler BJ",
+  "year": 2010,
+  "title": "Egocentric distance judgments in a large-screen immersive display",
+  "venue": "Proceedings of the 7th Symposium on Applied Perception in Graphics and Visualization (APGV '10), 57–60",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "egocentric-distance-judgments-in-a-large-2010",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Creem-Regehr SH, Thompson WB, Mohler BJ, Bülthoff HH",
+  "year": 2010,
+  "title": "The effect of viewing a self-avatar on distance judgments in an HMD-based virtual environment",
+  "venue": "Presence: Teleoperators and Virtual Environments, 19(3), 230–242",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": true,
+  "id": "the-effect-of-viewing-a-self-avatar-on-d-2010",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Trutoiu LC, Mohler BJ, Schulte-Pelkum J, Bülthoff HH",
+  "year": 2009,
+  "title": "Circular, linear, and curvilinear vection in a large-screen virtual environment with floor projection",
+  "venue": "Computers & Graphics, 33(1), 47–58",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "circular-linear-and-curvilinear-vection-2009",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Campos JL, Siegle JH, Mohler BJ, Bülthoff HH, Loomis JM",
+  "year": 2009,
+  "title": "Imagined self-motion differs from perceived self-motion: Evidence from a novel continuous pointing method",
+  "venue": "PLoS One, 4(11), e7793",
+  "type": "Journal article",
+  "topics": [
+   "C"
+  ],
+  "featured": false,
+  "id": "imagined-self-motion-differs-from-percei-2009",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Nusseck H-G, Teufel HJ, Nieuwenhuizen FM, Mohler BJ, Bülthoff HH",
+  "year": 2008,
+  "title": "(Mis)perception of self-motion in flight simulators",
+  "venue": "Proceedings of Driving Simulation Conference, 10–18",
+  "type": "Conference paper",
+  "topics": [
+   "C"
+  ],
+  "featured": false,
+  "id": "mis-perception-of-self-motion-in-flight-2008",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mohler BJ, Bülthoff HH, Thompson WB, Creem-Regehr SH",
+  "year": 2008,
+  "title": "A full-body avatar improves egocentric distance judgments in an immersive virtual environment",
+  "venue": "Proceedings of the 5th Symposium on Applied Perception in Graphics and Visualization (APGV '08), 194",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "a-full-body-avatar-improves-egocentric-d-2008",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Tcheang L, Bülthoff HH, Mohler BJ",
+  "year": 2008,
+  "title": "A portable navigation system for collecting real-world spatial behavior data",
+  "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2008), 834–839",
+  "type": "Conference paper",
+  "topics": [
+   "C"
+  ],
+  "featured": false,
+  "id": "a-portable-navigation-system-for-collect-2008",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mohler BJ, Thompson WB, Creem-Regehr SH, Willemsen P, Pick HL Jr, Rieser JJ",
+  "year": 2007,
+  "title": "Calibration of locomotion resulting from visual motion in a treadmill-based virtual environment",
+  "venue": "ACM Transactions on Applied Perception, 4(1), 4",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "calibration-of-locomotion-resulting-from-2007",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Weyel M, Mohler BJ, Bülthoff HH",
+  "year": 2007,
+  "title": "Calibration of walking speed while viewing a virtual world",
+  "venue": "Proceedings of IPT-EGVE 2007, 481–490",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "calibration-of-walking-speed-while-viewi-2007",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mohler BJ",
+  "year": 2007,
+  "title": "The Effect of Feedback Within a Virtual Environment on Human Distance Judgments",
+  "venue": "Doctoral Dissertation, School of Computing, University of Utah, Salt Lake City, UT, USA",
+  "type": "Dissertation",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "the-effect-of-feedback-within-a-virtual-2007",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mohler BJ, Thompson WB, Creem-Regehr SH, Pick HL Jr, Warren WH Jr",
+  "year": 2007,
+  "title": "Visual flow influences gait transition speed and preferred walking speed",
+  "venue": "Experimental Brain Research, 181(2), 221–228",
+  "type": "Journal article",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "visual-flow-influences-gait-transition-s-2007",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ },
+ {
+  "authors": "Mohler BJ, Thompson WB, Creem-Regehr SH, Pick HL Jr, Warren WH Jr, Rieser JJ, Willemsen P",
+  "year": 2004,
+  "title": "Visual motion influences locomotion in a treadmill virtual environment",
+  "venue": "Proceedings of the 1st Symposium on Applied Perception in Graphics and Visualization (APGV '04), 19–22",
+  "type": "Conference paper",
+  "topics": [
+   "B",
+   "C"
+  ],
+  "featured": false,
+  "id": "visual-motion-influences-locomotion-in-a-2004",
+  "img": "",
+  "pdf": "",
+  "doi": ""
+ }
+];
+
+if (PROFILE_PHOTO) document.getElementById('photo').innerHTML = `<img src="${PROFILE_PHOTO}" alt="Betty Jo Mohler">`;
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const authors = a => esc(a).split(', ').map(x => ME.test(x) ? `<b>${x}</b>` : x).join(', ');
+let current = 'ALL', query = '';
+
+function card(p, groupKey) {
+  const t = TOPICS[groupKey || p.topics[0]];
+  const thumb = p.img ? `<img src="${esc(p.img)}" alt="">`
+                      : `<span class="ini" style="color:${t.color}">${t.ini}</span><span>image</span>`;
+  const tags = p.topics.map(k => `<span class="tag" style="box-shadow:inset 3px 0 0 ${TOPICS[k].color}">${TOPICS[k].name}</span>`).join('');
+  const links = [p.pdf && `<a class="plink" href="${esc(p.pdf)}">PDF</a>`, p.doi && `<a class="plink" href="${esc(p.doi)}">DOI</a>`].filter(Boolean).join(' · ');
+  return `<article class="pub" id="${p.id}">
+    <div class="thumb" aria-hidden="true">${thumb}</div>
+    <div><div class="t">${esc(p.title)}</div>
+      <div class="a">${authors(p.authors)} (${p.year})</div>
+      <div class="v">${esc(p.venue)}</div>
+      <div class="meta">${p.featured ? '<span class="tag star">★ Selected</span>' : ''}<span class="tag type">${p.type}</span>${tags}${links ? ' ' + links : ''}</div>
+    </div></article>`;
+}
+
+function render() {
+  const q = query.toLowerCase();
+  const match = p => !q || (p.title + ' ' + p.authors + ' ' + p.venue + ' ' + p.year).toLowerCase().includes(q);
+  const el = document.getElementById('publist');
+  let out = '';
+  if (current === 'ALL') {
+    const sel = PUBS.filter(p => p.featured && match(p));
+    if (sel.length) out += group('Selected publications', '#c9a227', sel, null);
+    for (const k of Object.keys(TOPICS)) {
+      const list = PUBS.filter(p => p.topics[0] === k && match(p));
+      if (list.length) out += group(TOPICS[k].name, TOPICS[k].color, list, k);
+    }
+  } else {
+    const list = PUBS.filter(p => p.topics.includes(current) && match(p));
+    if (list.length) out += group(TOPICS[current].name, TOPICS[current].color, list, current);
+  }
+  el.innerHTML = out || '<p class="empty">No publications match your search.</p>';
+}
+function group(title, color, list, key) {
+  return `<div class="group"><span class="bar" style="background:${color}"></span><h3>${title}</h3><span class="count">${list.length}</span></div>` + list.map(p => card(p, key)).join('');
+}
+
+function toolbar() {
+  const tb = document.getElementById('toolbar');
+  const chip = (key, label, color, n) => `<button class="chip" data-k="${key}" aria-pressed="${current === key}">${color ? `<span class="dot" style="background:${color}"></span>` : ''}${label}<span class="n">${n}</span></button>`;
+  tb.innerHTML = chip('ALL', 'All topics', '', PUBS.length) +
+    Object.entries(TOPICS).map(([k, t]) => chip(k, t.name, t.color, PUBS.filter(p => p.topics.includes(k)).length)).join('') +
+    `<input class="search" type="search" placeholder="Search title, author, venue…" aria-label="Search publications" value="${esc(query)}">`;
+  tb.querySelectorAll('.chip').forEach(b => b.onclick = () => { current = b.dataset.k; toolbar(); render(); });
+  const s = tb.querySelector('.search');
+  s.oninput = e => { query = e.target.value; render(); };
+}
+toolbar(); render();
+</script>
+</body>
+</html>
