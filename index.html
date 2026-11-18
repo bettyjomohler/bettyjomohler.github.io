@@ -70,7 +70,7 @@
   .pub{display:grid;grid-template-columns:72px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
   .thumb{width:72px;height:72px;border-radius:8px;border:1.5px dashed #cfc5bb;background:#f4efe9;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:10px;color:#9a8f86;text-align:center;line-height:1.2;overflow:hidden}
   .thumb .ini{font-family:var(--serif);font-size:20px;font-weight:700}
-  .thumb img{width:100%;height:100%;object-fit:cover}
+  .thumb img{width:100%;height:100%;object-fit:cover} .thumb svg{display:block} .thumb.t2{border:0}
   .pub .t{font-weight:600;line-height:1.35}
   .pub .a{font-size:14px;color:var(--muted);margin:3px 0}
   .pub .a b{color:var(--ink)}
@@ -81,6 +81,15 @@
   .tag.star{background:#fff3cf}
   .plink{font-size:13px;font-weight:600}
   .empty{color:var(--muted);padding:20px 0}
+  .media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:26px}
+  .vid{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;color:var(--ink)}
+  .vid:hover{border-color:var(--accent);text-decoration:none}
+  .vid .im{aspect-ratio:16/9;background:#222 center/cover no-repeat;position:relative}
+  .vid .im:after{content:"▶";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+  .vid .tx{padding:12px 14px} .vid b{display:block;font-size:15px;line-height:1.35} .vid span{font-size:13px;color:var(--muted)}
+  ul.press{list-style:none;padding:0;margin:0 0 22px} ul.press li{padding:9px 0;border-bottom:1px dashed var(--line)} ul.press span{color:var(--muted);font-size:14px}
+  h3.sub{font-family:var(--serif);font-size:21px;margin:8px 0 12px}
+  @media (max-width:760px){.media-grid{grid-template-columns:1fr}}
   footer{padding:30px 0 50px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
   @media (max-width:760px){
     .hero .grid{grid-template-columns:1fr;gap:20px}
@@ -94,7 +103,7 @@
 <body>
 <nav><div class="wrap">
   <span class="brand">Betty Jo Mohler</span>
-  <a href="#about">About</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a>
+  <a href="#about">About</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#media">Talks &amp; media</a>
 </div></nav>
 
 <header class="hero"><div class="wrap grid">
@@ -159,6 +168,12 @@
     <li>Supervised 8 doctoral researchers, 7 postdoctoral scientists and 28 Bachelor’s and Master’s theses.</li>
     <li>Mentored applied scientists and research interns at Amazon in machine learning and computer vision.</li>
   </ul>
+</div></section>
+<section id="media"><div class="wrap">
+  <h2>Talks &amp; media</h2>
+  <h3 class="sub">Talks &amp; video</h3><div class="media-grid"><a class="vid" href="https://www.youtube.com/watch?v=c6gUlnKTQ1o"><div class="im" style="background-image:url(https://i.ytimg.com/vi/c6gUlnKTQ1o/hqdefault.jpg)"></div><div class="tx"><b>The importance of avatars for virtual reality</b><span>Science Notes Berlin – “Der erweiterte Mensch” · 2017</span></div></a><a class="vid" href="https://www.youtube.com/watch?v=oJQ6q6nP8aE"><div class="im" style="background-image:url(https://i.ytimg.com/vi/oJQ6q6nP8aE/hqdefault.jpg)"></div><div class="tx"><b>The use and importance of avatars and multisensory body awareness</b><span>CopenX Realities, Copenhagen · 2018</span></div></a><a class="vid" href="https://www.youtube.com/watch?v=0i4yGgunldE"><div class="im" style="background-image:url(https://i.ytimg.com/vi/0i4yGgunldE/hqdefault.jpg)"></div><div class="tx"><b>The Virtual Caliper: Rapid creation of metrically accurate avatars from 3D measurements</b><span>IEEE VR 2019 paper session · 2019</span></div></a><a class="vid" href="https://www.youtube.com/watch?v=TLKqKlrQv4s"><div class="im" style="background-image:url(https://i.ytimg.com/vi/TLKqKlrQv4s/hqdefault.jpg)"></div><div class="tx"><b>Avatars &amp; in-flight VR</b><span>Computerphile · 2014</span></div></a><a class="vid" href="https://www.youtube.com/watch?v=Xm1LrQ32kDg"><div class="im" style="background-image:url(https://i.ytimg.com/vi/Xm1LrQ32kDg/hqdefault.jpg)"></div><div class="tx"><b>Using avatars for redirected walking</b><span>Max Planck Institute for Biological Cybernetics · 2011</span></div></a><a class="vid" href="https://www.youtube.com/watch?v=-jgmqr4ekb4"><div class="im" style="background-image:url(https://i.ytimg.com/vi/-jgmqr4ekb4/hqdefault.jpg)"></div><div class="tx"><b>Riding the MPI Motion Simulator</b><span>Max Planck Institute for Biological Cybernetics · 2008</span></div></a><a class="vid" href="https://www.youtube.com/watch?v=UWSYy6nLGw0"><div class="im" style="background-image:url(https://i.ytimg.com/vi/UWSYy6nLGw0/hqdefault.jpg)"></div><div class="tx"><b>Virtual haptic suturing simulator (with Dr. Roger Webster)</b><span>Millersville University · 2008</span></div></a></div>
+  <h3 class="sub">Podcasts</h3><ul class="press"><li><a href="https://voicesofvr.com/576-studying-anorexia-nervosa-with-vr-self-avatars-is-body-image-a-matter-of-perception-or-attitude/">#576: Studying anorexia nervosa with VR self-avatars – perception or attitude?</a> <span>— Voices of VR podcast (recorded at IEEE VR 2017), 2017</span></li><li><a href="https://voicesofvr.com/372-automated-avatar-stylization-to-counter-the-uncanny-valley/">#372: Automated avatar stylization to counter the uncanny valley</a> <span>— Voices of VR podcast (recorded at IEEE VR 2016), 2016</span></li></ul>
+  <h3 class="sub">Press</h3><ul class="press"><li><a href="https://www.amazon.science/academic-engagements/betty-mohler-amazon-is-a-great-place-to-further-the-state-of-the-art-in-the-world-of-digital-humans">Amazon is a great place to further the state of the art in the world of digital humans</a> <span>— Amazon Science (interview)</span></li><li><a href="https://roadtovr.com/studying-anorexia-nervosa-with-vr-self-avatars-is-body-image-from-perception-or-attitude/">Studying anorexia nervosa with VR self-avatars</a> <span>— Road to VR, 2017</span></li><li><a href="https://idw-online.de/de/news632560">Zu dick? Zu dünn? – Max-Planck-Wissenschaftler nutzen lebensgroße 3D-Avatare zur Körperwahrnehmung</a> <span>— Max Planck press release (idw), 2015</span></li><li><a href="https://www.immersivelearning.news/tag/selbstwahrnehmung">Magersucht-Patientinnen haben keine verzerrte Selbstwahrnehmung, sondern eine Präferenz für untergewichtige Körper</a> <span>— immersivelearning.news</span></li></ul>
 </div></section>
 </main>
 
@@ -1822,14 +1837,34 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':
 const authors = a => esc(a).split(', ').map(x => ME.test(x) ? `<b>${x}</b>` : x).join(', ');
 let current = 'ALL', query = '';
 
+
+const HEX = {A:'#2f5d8a',B:'#7a1f3d',C:'#2e7d6b',D:'#b4632b',E:'#6a4c93',F:'#5a6b2e'};
+const GLYPH = {
+  A:'<g stroke="#fff" stroke-width="2.2" fill="#fff" opacity=".9"><line x1="22" y1="22" x2="50" y2="14"/><line x1="22" y1="22" x2="50" y2="34"/><line x1="22" y1="40" x2="50" y2="14"/><line x1="22" y1="40" x2="50" y2="34"/><circle cx="22" cy="22" r="4.5"/><circle cx="22" cy="40" r="4.5"/><circle cx="50" cy="14" r="4.5"/><circle cx="50" cy="34" r="4.5"/></g>',
+  B:'<g fill="none" stroke="#fff" stroke-width="2.6" opacity=".92"><rect x="14" y="16" width="44" height="22" rx="8"/><circle cx="27" cy="27" r="5.5"/><circle cx="45" cy="27" r="5.5"/><path d="M14 24 H8 M58 24 H64"/></g>',
+  C:'<g fill="none" stroke="#fff" stroke-width="2" opacity=".9"><path d="M8 44 L36 12 L64 44 Z"/><path d="M22 44 L36 12 L50 44"/><path d="M17 34 H55 M12 39 H60"/></g>',
+  D:'<g fill="#fff" opacity=".92"><circle cx="36" cy="13" r="6"/><path d="M27 21 h18 l5 14 h-6 l-3-8 v17 h-5 v-12 h-0 v12 h-5 v-17 l-3 8 h-6 z"/></g>',
+  E:'<g fill="#fff" opacity=".92"><rect x="31" y="10" width="10" height="32" rx="2"/><rect x="20" y="21" width="32" height="10" rx="2"/></g>',
+  F:'<g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".92"><path d="M18 42 L46 14"/><circle cx="49" cy="11" r="4"/><path d="M14 44 q6 -2 10 2"/></g>'
+};
+function vshort(v) {
+  const s = String(v).replace(/^In:\s*/,'');
+  const rules = [[/IEEE (International )?Conference on Virtual Reality|IEEE VR|IEEE Virtual Reality/i,'IEEE VR'],[/Applied Perception/i,'ACM SAP'],[/Transactions on Applied Perception/i,'ACM TAP'],[/ICASSP|Acoustics, Speech/i,'ICASSP'],[/Computer Vision \(ICCV\)|ICCV/i,'ICCV'],[/PLoS One/i,'PLoS One'],[/Scientific Reports/i,'Sci. Rep.'],[/Presence/i,'Presence'],[/Frontiers/i,'Frontiers'],[/Psychological Science/i,'Psych. Sci.'],[/Experimental Brain Research/i,'Exp. Brain Res.'],[/Journal of Vision/i,'J. Vision'],[/Vision Research/i,'Vision Res.'],[/NeuroImage/i,'NeuroImage'],[/Perception/i,'Perception'],[/Eurographics|EGVE|JVRC|ICAT/i,'Eurographics'],[/Visualization and Computer Graphics/i,'IEEE TVCG'],[/Eating Disorders/i,'EERV'],[/Clinical Psychology/i,'Clin. Psych. Rev.'],[/Human Factors/i,'Human Factors'],[/Neuropsychologia/i,'Neuropsychologia'],[/Experimental Psychology/i,'JEP: General'],[/Biological Cybernetics/i,'Biol. Cybern.'],[/Displays/i,'Displays'],[/Computers & Graphics|Computers and Graphics/i,'Comp. & Graphics'],[/IROS|Intelligent Robots/i,'IROS'],[/Electromyography/i,'J. Electromyogr.'],[/SPIE/i,'SPIE'],[/Medicine Meets|Studies in Health/i,'MMVR'],[/Face and Gesture|FG/i,'IEEE FG'],[/Dissertation|University of Utah/i,'PhD thesis']];
+  for (const [re, l] of rules) if (re.test(s)) return l;
+  return s.split(/[,(]/)[0].trim().slice(0, 16);
+}
+function tile(p, k) {
+  const c = HEX[k] || '#555';
+  return `<svg viewBox="0 0 72 72" width="72" height="72" role="img" aria-label="${esc(TOPICS[k].name)}"><defs><linearGradient id="g${p.id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="${c}" stop-opacity=".72"/></linearGradient></defs><rect width="72" height="72" fill="url(#g${p.id})"/>${GLYPH[k]||''}<text x="36" y="57" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.2" font-weight="700" fill="#fff">${esc(vshort(p.venue))}</text><text x="36" y="67" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" fill="#fff" opacity=".85">${esc(p.year)}</text></svg>`;
+}
 function card(p, groupKey) {
   const t = TOPICS[groupKey || p.topics[0]];
   const thumb = p.img ? `<img src="${esc(p.img)}" alt="">`
-                      : `<span class="ini" style="color:${t.color}">${t.ini}</span><span>image</span>`;
+                      : tile(p, groupKey || p.topics[0]);
   const tags = p.topics.map(k => `<span class="tag" style="box-shadow:inset 3px 0 0 ${TOPICS[k].color}">${TOPICS[k].name}</span>`).join('');
   const links = [p.pdf && `<a class="plink" href="${esc(p.pdf)}" target="_blank" rel="noopener">PDF</a>`, p.doi && `<a class="plink" href="${esc(p.doi)}">${p.doi.includes('doi.org') ? 'DOI' : 'Link'}</a>`].filter(Boolean).join(' · ');
   return `<article class="pub" id="${p.id}">
-    <div class="thumb" aria-hidden="true">${thumb}</div>
+    <div class="thumb${p.img ? "" : " t2"}" aria-hidden="true">${thumb}</div>
     <div><div class="t">${esc(p.title)}</div>
       <div class="a">${authors(p.authors)} (${p.year})</div>
       <div class="v">${esc(p.venue)}</div>

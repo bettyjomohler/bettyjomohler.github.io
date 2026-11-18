@@ -1,0 +1,19 @@
+{"talks":[
+ {"title":"The importance of avatars for virtual reality","where":"Science Notes Berlin – “Der erweiterte Mensch”","year":2017,"yt":"c6gUlnKTQ1o"},
+ {"title":"The use and importance of avatars and multisensory body awareness","where":"CopenX Realities, Copenhagen","year":2018,"yt":"oJQ6q6nP8aE"},
+ {"title":"The Virtual Caliper: Rapid creation of metrically accurate avatars from 3D measurements","where":"IEEE VR 2019 paper session","year":2019,"yt":"0i4yGgunldE"},
+ {"title":"Avatars & in-flight VR","where":"Computerphile","year":2014,"yt":"TLKqKlrQv4s"},
+ {"title":"Using avatars for redirected walking","where":"Max Planck Institute for Biological Cybernetics","year":2011,"yt":"Xm1LrQ32kDg"},
+ {"title":"Riding the MPI Motion Simulator","where":"Max Planck Institute for Biological Cybernetics","year":2008,"yt":"-jgmqr4ekb4"},
+ {"title":"Virtual haptic suturing simulator (with Dr. Roger Webster)","where":"Millersville University","year":2008,"yt":"UWSYy6nLGw0"}
+],
+"podcasts":[
+ {"title":"#576: Studying anorexia nervosa with VR self-avatars – perception or attitude?","where":"Voices of VR podcast (recorded at IEEE VR 2017)","year":2017,"url":"https://voicesofvr.com/576-studying-anorexia-nervosa-with-vr-self-avatars-is-body-image-a-matter-of-perception-or-attitude/"},
+ {"title":"#372: Automated avatar stylization to counter the uncanny valley","where":"Voices of VR podcast (recorded at IEEE VR 2016)","year":2016,"url":"https://voicesofvr.com/372-automated-avatar-stylization-to-counter-the-uncanny-valley/"}
+],
+"press":[
+ {"title":"Amazon is a great place to further the state of the art in the world of digital humans","where":"Amazon Science (interview)","year":"","url":"https://www.amazon.science/academic-engagements/betty-mohler-amazon-is-a-great-place-to-further-the-state-of-the-art-in-the-world-of-digital-humans"},
+ {"title":"Studying anorexia nervosa with VR self-avatars","where":"Road to VR","year":2017,"url":"https://roadtovr.com/studying-anorexia-nervosa-with-vr-self-avatars-is-body-image-from-perception-or-attitude/"},
+ {"title":"Zu dick? Zu dünn? – Max-Planck-Wissenschaftler nutzen lebensgroße 3D-Avatare zur Körperwahrnehmung","where":"Max Planck press release (idw)","year":2015,"url":"https://idw-online.de/de/news632560"},
+ {"title":"Magersucht-Patientinnen haben keine verzerrte Selbstwahrnehmung, sondern eine Präferenz für untergewichtige Körper","where":"immersivelearning.news","year":"","url":"https://www.immersivelearning.news/tag/selbstwahrnehmung"}
+]}
